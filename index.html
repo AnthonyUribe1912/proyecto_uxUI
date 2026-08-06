@@ -67,18 +67,16 @@
       </div>
       <p class="footer-text">Síguenos para nuevas promociones</p>
     </footer>
-<!-- ... resto de tu código ... -->
 
 <script>
     document.querySelectorAll('.favorito').forEach(boton => {
         boton.addEventListener('click', function() {
-            // Alternar entre corazón vacío y lleno
             if (this.innerText === '♡') {
                 this.innerText = '♥';
-                this.style.color = '#e91e63'; // Color rosa/rojo
+                this.style.color = '#e91e63'; 
             } else {
                 this.innerText = '♡';
-                this.style.color = 'black'; // Vuelve al color original
+                this.style.color = 'black'; 
             }
         });
     });
