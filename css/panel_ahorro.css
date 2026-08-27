@@ -1,4 +1,7 @@
-/* Panel de Ahorro */
+/* ==========================================================================
+   PANEL DE AHORRO (panel_ahorro.html) - UNIQUE STYLES
+   ========================================================================== */
+
 .main-container {
   width: 100%;
   max-width: 1480px;
@@ -8,22 +11,11 @@
   flex-direction: column;
   gap: 1.5rem;
   box-sizing: border-box;
-}
-.header-principal {
-  width: 100vw !important;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw !important;
-  margin-right: -50vw !important;
-  max-width: none !important;
-  background-color: var(--color-white);
-  box-shadow: var(--shadow-sm);
-  padding: var(--spacing-md) var(--spacing-xl);
-  box-sizing: border-box;
-  z-index: 100;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Tarjeta Favoritos */
 .favoritos {
   border: 1px solid rgba(124, 58, 237, 0.18);
   border-radius: var(--radius-lg);
@@ -39,6 +31,7 @@
   gap: var(--spacing-md);
   margin-bottom: var(--spacing-lg);
 }
+
 .btn-favorito-corazon {
   min-width: 44px;
   width: 44px;
@@ -58,6 +51,7 @@
   height: 20px;
   fill: #e11d48;
 }
+
 .favoritos-header > img {
   width: 32px;
   height: 32px;
@@ -65,6 +59,7 @@
   flex-shrink: 0;
 }
 
+/* Buscador */
 .buscador {
   display: flex;
   align-items: center;
@@ -97,15 +92,14 @@
 
 .btn-buscar {
   min-width: 42px;
+  width: 42px;
+  height: 42px;
   background: var(--color-primary);
   border: none;
   border-radius: 50%;
-  width: 42px;
-  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
-  place-items: center;
   cursor: pointer;
   transition: background var(--transition-fast), transform var(--transition-fast);
 }
@@ -121,6 +115,7 @@
   filter: brightness(0) invert(1);
 }
 
+/* Tarjeta de Servicio y Carrusel */
 .servicio-card {
   background-color: #c8bbfb;
   border-radius: var(--radius-pill);
@@ -138,14 +133,13 @@
   height: 48px;
   background-color: var(--color-white);
   border-radius: 50%;
-  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  place-items: center;
   overflow: hidden;
 }
+
 .servicio-icono img {
   width: 28px;
   height: 28px;
@@ -158,7 +152,7 @@
 
 .servicio-nombre {
   font-size: var(--font-size-sm);
-  margin: 0 ;
+  margin: 0;
   font-weight: var(--font-weight-bold);
   color: var(--color-text-muted);
 }
@@ -169,9 +163,15 @@
   color: var(--color-text-muted);
 }
 
+#carouselServicios {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+}
+
 #carouselServicios .carousel-indicators {
   position: static;
-  margin-top: var(--space-sm, 0.5rem);
+  margin-top: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -198,10 +198,13 @@
   opacity: 1 !important;
   transform: scale(1.2);
 }
+
 #carouselServicios .carousel-indicators [data-bs-target]::before,
 #carouselServicios .carousel-indicators [data-bs-target]::after {
   display: none !important;
 }
+
+/* Tarjetas Informativas y Gráficas */
 .tarjeta-info,
 .graficas,
 .ahorro,
@@ -218,12 +221,7 @@
   background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 12px 30px rgba(124, 58, 237, 0.06);
 }
-.graficas-acciones {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-sm);
-}
+
 .tarjeta-info,
 .ahorro {
   text-align: center;
@@ -270,7 +268,6 @@
   font-weight: var(--font-weight-bold);
   padding: 0.3rem 0.8rem;
   border-radius: var(--radius-pill);
-  font-weight: var(--font-weight-bold);
   font-size: var(--font-size-sm);
   background: var(--color-bg);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
@@ -301,7 +298,6 @@
 
 .btn-compartir {
   min-width: 42px;
-
   background: var(--color-white);
   border: 2px solid var(--color-accent);
   border-radius: var(--radius-pill);
@@ -340,50 +336,12 @@
 
 .btn-ver-mas:hover {
   background: var(--color-primary-dark);
-  color: var(--color-primary);
   transform: translateY(-1px);
-  border: 2px solid var(--color-primary);
 }
 
 .btn-ver-mas:focus-visible {
   outline: 3px solid var(--color-accent);
   outline-offset: 2px;
-}
-
-.ahorro {
-  border: 1px solid rgba(124, 58, 237, 0.14);
-  padding: 1.75rem;
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.ahorro p {
-  margin: 0;
-  color: var(--color-text-dark);
-}
-
-/* Ajuste de contenedor del nav en escritorio */
-.nav-desktop ul li a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 1rem;
-  border-radius: 16px;            
-  text-decoration: none;
-  color: var(--color-text-dark);
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-/* Estado ACTIVO para la página actual (Ahorros) */
-.nav-desktop ul li a.active {
-  background-color: #c3a5f8 !important; 
-  color: #111111;
-}
-
-/* Hover suave */
-.nav-desktop ul li a:hover:not(.active) {
-  background-color: rgba(195, 165, 248, 0.3);
 }
 
 .monto-ahorro {
@@ -393,13 +351,11 @@
   margin: 0;
 }
 
-@media (min-width: 992px) {
-  .graficas-contenido {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
 
+@media (min-width: 992px) {
   .main-container {
     display: grid;
     grid-template-columns: 1fr 1.8fr 1fr;
@@ -409,6 +365,12 @@
 
   .favoritos {
     grid-column: 1 / -1;
+  }
+
+  .graficas-contenido {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -426,11 +388,15 @@
   .graficas-contenido {
     gap: 1rem;
   }
+  
+  .main-container {
+    padding-bottom: 5rem; /* Margen para evitar solapamiento con nav inferior móvil */
+  }
 }
 
 @media (max-width: 576px) {
   .main-container {
-    padding: 0 1rem;
+    padding: 0 1rem 5rem;
   }
 
   .input-buscar {
@@ -440,90 +406,5 @@
   .btn-buscar {
     width: 42px;
     height: 42px;
-  }
-
-}
-  .nav-mobile-bottom {
-  display: none;
-}
-
-@media (min-width: 992px) {
-  /* Distribución de 3 Columnas */
-  .main-container {
-    display: grid;
-    grid-template-columns: 1fr 1.8fr 1fr;
-    align-items: stretch;
-  }
-
-  .favoritos {
-    grid-column: 1 / -1;
-  }
-
-  .graficas-contenido {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-@media (max-width: 767px) {
-  header {
-    display: none !important;
-  }
-  .logo-desktop,
-  .nav-desktop,
-  .site-footer {
-    display: none !important;
-  }
-
-  .main-container {
-    padding-bottom: 5rem;
-  }
-
-  .favoritos-header {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .servicio-card {
-    flex-direction: column;
-    text-align: center;
-    border-radius: var(--radius-lg);
-  }
-
-  /* Bar Fija Móvil */
-  .nav-mobile-bottom {
-    display: block;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: var(--color-white);
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    padding: 0.4rem 0;
-  }
-
-  .nav-mobile-bottom ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .nav-mobile-bottom a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: var(--color-text-dark);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-bold);
-  }
-
-  .nav-mobile-bottom img {
-    width: 22px;
-    height: 22px;
   }
 }
