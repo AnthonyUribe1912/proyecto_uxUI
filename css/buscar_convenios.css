@@ -1,8 +1,3 @@
-/* ==========================================
-   1. RESET & VARIABLES GLOBALES (UI Kit)
- 
-   ========================================== */
-
 *,
 *::before,
 *::after {
@@ -46,6 +41,8 @@ main.convenios-page {
   flex: 1 0 auto;
   padding-bottom: 3rem; /* Espacio de seguridad antes del footer */
 }
+
+
 
 :root {
   /* Colores del UI Kit */
@@ -94,9 +91,9 @@ main.convenios-page {
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* ==========================================
-   2. HEADER & NAVEGACIÓN
-   ========================================== */
+/* 
+    HEADER & NAVEGACION
+    */
 header {
   display: flex;
   align-items: center;
@@ -115,7 +112,7 @@ header {
 }
 .logo img,
 .logo-desktop img {
-  max-width: 140px;      /* Ancho máximo razonable en laptop */
+  max-width: 140px;      /* Ancho maximo razonable en laptop */
   height: auto;
   width: auto;
   max-height: 45px;      /* Evita que se vuelva gigante verticalmente */
@@ -196,9 +193,9 @@ nav a[aria-disabled="true"] img {
   filter: grayscale(100%);
 }
 
-/* ==========================================
-   3. BANNER Y CARRUSEL DE MARCAS (General)
-   ========================================== */
+/* 
+    BANNER Y CARRUSEL DE MARCAS 
+    */
 .banner-promocional {
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -272,9 +269,9 @@ nav a[aria-disabled="true"] img {
   outline-offset: 3px;
 }
 
-/* ==========================================
-   4. CONVENIOS & TARJETAS
-   ========================================== */
+/* 
+    CONVENIOS Y TARJETAS
+    */
 .convenios-page {
   min-height: 100vh;
   padding: 1.5rem 1rem 2rem;
@@ -378,6 +375,20 @@ nav a[aria-disabled="true"] img {
   outline: none;
   margin-bottom: 1rem;
 }
+.estado-vacio-favoritos {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--color-text-muted);
+  grid-column: 1 / -1;
+}
+.link-ver-listado {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 .favorito:hover {
   transform: scale(1.2);
@@ -422,9 +433,9 @@ nav a[aria-disabled="true"] img {
   margin-bottom: 15px;
 }
 
-/* ==========================================
-   5. PANEL DE AHORRO (panel_ahorro.html)
-   ========================================== */
+/* 
+    PANEL DE AHORRO 
+    */
 .main-container {
   width: 100%;
   max-width: 1280px;
@@ -692,7 +703,7 @@ nav a[aria-disabled="true"] img {
   outline: 3px solid var(--color-accent);
 }
 
-/* Sección Ahorro Total */
+/* Seccion Ahorro Total */
 .ahorro {
   border: 2px solid var(--color-accent);
   border-radius: var(--radius-card);
@@ -714,9 +725,9 @@ nav a[aria-disabled="true"] img {
   margin-top: 8px !important;
 }
 
-/* ==========================================
-   6. FOOTER
-   ========================================== */
+/* 
+    FOOTER
+    */
 
 footer {
   flex-shrink: 0;
@@ -775,7 +786,7 @@ footer {
     grid-template-columns: repeat(3, 1fr);   /* desktop: 3 columnas, tope */
   }
 }
-/*Filtro como barra desplegable en móvil*/
+/*Filtro como barra desplegable en movil*/
 @media (min-width: 768px) {
   .btn-toggle-filtro { display: none; }
   .filtro-campos[hidden]
@@ -817,9 +828,9 @@ footer {
     display: block; /* footer normal en tablet/desktop */
   }
 }
-/* ==========================================
-   7. MEDIA QUERIES (Ajustes de Escritorio)
-   ========================================== */
+/* 
+   MEDIA QUERIES (Ajustes de Escritorio)
+   */
 @media (min-width: 992px) {
   .graficas-contenido {
     flex-direction: row;
@@ -839,7 +850,7 @@ footer {
 .tarjeta-info,
 .graficas,
 .ahorro {
-  min-height: 180px;      /* Reduce el estiramiento vertical */
+  min-height: 180px;      
   padding: 1.25rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -901,9 +912,9 @@ footer {
   margin: 0;
 }
 
-/* ==========================================
+/* 
    8. BUSCAR CONVENIOS (buscar-convenios.html)
-   ========================================== */
+    */
 
 
 
@@ -991,9 +1002,9 @@ footer {
   margin: 0;
   line-height: 1.2;
 }
-/* ==========================================
-    BOTÓN DE CORAZÓN DE FAVORITOS
-   ========================================== */
+/* 
+    BOTON DE CORAZON DE FAVORITOS
+    */
 .btn-favorito {
   background: white;
   border: 1px solid #e2e8f0;
@@ -1017,8 +1028,8 @@ footer {
 .icono-corazon {
   width: 20px;
   height: 20px;
-  fill: none;               /* Sin relleno por defecto */
-  stroke: #64748b;          /* Color del borde gris */
+  fill: none;               
+  stroke: #64748b;          
   stroke-width: 2;
   transition: fill 0.25s ease, stroke 0.25s ease, transform 0.2s ease;
 }
@@ -1133,9 +1144,10 @@ footer {
   text-align: center;
 }
 
-/* ==========================================
+
+/* 
    CORRECCIONES DE RESPONSIVIDAD Y FILTROS
-   ========================================== */
+   */
 
 /* 1. Corrección Filtros Escritorio */
 @media (min-width: 768px) {
@@ -1199,9 +1211,9 @@ footer {
   }
 }
 
-/* ==============================
+/* 
    HEADER CON BUSCADOR Y PILDORAS 
-   ============================== */
+    */
 
 .header-principal {
   background: var(--color-white);
@@ -1335,7 +1347,12 @@ footer {
   background-repeat: no-repeat;
   background-position: right 0.6rem center;
 }
-
+.dropdown-filtro select:focus-visible,
+.chip-filtro:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-pill);
+}
 
 /* Responsive para Móvil */
 @media (max-width: 767px) {
@@ -1355,9 +1372,9 @@ footer {
   }
 }
 
-/* ==========================================
+/* 
    AJUSTES DE CENTRADO Y NAVEGACIÓN MÓVIL
-   ========================================== */
+    */
 
 /* Centrado perfecto de la grilla y tarjetas */
 .grilla-convenios {
@@ -1463,9 +1480,9 @@ footer {
     padding-bottom: 5rem; /* Espacio para que el nav inferior no tape el contenido */
   }
 }
-/* ==========================================
-   CORRECCIÓN ANCHO COMPLETO (ANULACIÓN DE MÁRGENES)
-   ========================================== */
+/* 
+   CORRECCION ANCHO COMPLETO 
+    */
 
 /* 1. Forzar que el body y html ocupen el 100% real sin márgenes extra */
 html, body {
