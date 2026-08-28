@@ -1,118 +1,29 @@
-:root {
-  --purple-main: #7b42fb;
-  --purple-dark: #622ad8;
-  --purple-light-bg: #e6dcff;
-  --orange-accent: #f59e0b;
-  --text-dark: #1a1a1a;
-  --bg-white: #ffffff;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* ==========================================================================
+   PAGOS Y RENOVACIONES (pagos.html) - UNIQUE STYLES
+   ========================================================================== */
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--bg-white);
-  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
-  padding: 20px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-
-.main-header {
-  width: 100%;
-  max-width: 1100px;
-  display: flex;
-  align-items: center;
-  position: relative; 
-  margin-bottom: 30px;
-  padding: 10px 0;
-}
-
-.logo-container {
-  position: absolute;
-  left: 0;
-  border: 2px solid var(--purple-main);
-  border-radius: 35px;
-  padding: 5px 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 10px rgba(123, 66, 251, 0.1);
-}
-
-.nav-logo {
-  height: 40px;
-  width: auto;
-}
-
-.icon-nav {
-  display: flex;
-  gap: 35px;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.nav-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: var(--text-dark);
-  font-weight: 700;
-  font-size: 0.85rem;
-  gap: 6px;
-  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.2s ease;
-}
-
-.nav-item:hover {
-  transform: translateY(-6px);
-  color: var(--purple-main);
-}
-
-.icon-wrapper {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 14px;
-  font-size: 1.3rem;
-  transition: all 0.25s ease;
-}
-
-.nav-item.active .icon-wrapper {
-  background-color: var(--purple-light-bg);
-  border: 2px solid var(--purple-main);
-  color: var(--purple-main);
-  box-shadow: 0 4px 12px rgba(123, 66, 251, 0.18);
-}
-
-.nav-item.active span {
-  color: var(--purple-main);
-}
-
-.nav-item.active:hover {
-  transform: translateY(-7px);
-}
-
 
 .title-banner-wrapper {
   width: 100%;
   max-width: 1100px;
   display: flex;
   justify-content: center;
+  margin-top: 30px;
   margin-bottom: 30px;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .page-title-banner {
-  background-color: var(--purple-main);
+  background-color: var(--color-primary, #7C3AED);
   color: white;
   font-size: 1.3rem;
   font-weight: 700;
@@ -121,28 +32,30 @@ body {
   text-align: center;
 }
 
-
 .subscriptions-grid {
   width: 100%;
   max-width: 1100px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px 20px;
+  padding: 0 20px 40px;
+  box-sizing: border-box;
 }
 
 .sub-card {
-  background-color: var(--purple-light-bg);
+  background-color: rgba(124, 58, 237, 0.08); /* Unified color variable helper or light background */
   border-radius: 25px;
   padding: 20px 18px 18px 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  border: 1px solid rgba(124, 58, 237, 0.12);
 }
 
 .status-pill {
-  background-color: var(--bg-white);
-  border: 2px solid var(--orange-accent);
+  background-color: var(--color-white, #ffffff);
+  border: 2px solid var(--color-accent, #F59E0B);
   color: #333;
   font-weight: 700;
   font-size: 0.8rem;
@@ -150,7 +63,6 @@ body {
   border-radius: 15px;
   margin-bottom: 15px;
 }
-
 
 .table-container {
   width: 100%;
@@ -161,8 +73,8 @@ body {
 }
 
 .table-header {
-  background-color: var(--bg-white);
-  border: 2px solid var(--purple-main);
+  background-color: var(--color-white, #ffffff);
+  border: 2px solid var(--color-primary, #7C3AED);
   border-radius: 15px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -173,7 +85,7 @@ body {
 }
 
 .table-row {
-  background-color: var(--bg-white);
+  background-color: var(--color-white, #ffffff);
   border-radius: 12px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -185,7 +97,7 @@ body {
 }
 
 .date-badge {
-  background-color: var(--orange-accent);
+  background-color: var(--color-accent, #F59E0B);
   color: white;
   font-weight: 700;
   padding: 2px 6px;
@@ -194,106 +106,66 @@ body {
   display: inline-block;
 }
 
-
 .card-actions {
   display: flex;
   gap: 12px;
   width: 100%;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .btn-card {
+  min-width: 100px;
+  height: 36px;
   border-radius: 18px;
-  padding: 7px 20px;
-  font-weight: 700;
   font-size: 0.8rem;
-  cursor: pointer;
-  transition: transform 0.15s ease, background-color 0.2s ease;
+  font-weight: 700;
 }
 
-.btn-card:hover {
-  transform: translateY(-1px);
-}
-
-.btn-view-more {
-  background-color: var(--purple-main);
-  color: white;
-  border: none;
-}
-
-.btn-view-more:hover {
-  background-color: var(--purple-dark);
-}
-
-.btn-pay,
-.btn-renew {
-  background-color: var(--bg-white);
-  border: 2px solid var(--orange-accent);
-  color: var(--orange-accent);
-}
-
-.btn-pay:hover,
-.btn-renew:hover {
-  background-color: var(--orange-accent);
+.btn-card-primary {
+  background-color: var(--color-primary, #7C3AED);
   color: white;
 }
 
+.btn-card-secondary {
+  background-color: var(--color-white, #ffffff);
+  border: 1.5px solid var(--color-accent, #F59E0B);
+  color: var(--color-accent, #F59E0B);
+}
+
+.btn-card-secondary:hover {
+  background-color: var(--color-accent, #F59E0B);
+  color: white;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
 
 @media (max-width: 992px) {
-  body {
-    padding: 20px;
-  }
-
   .subscriptions-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
   }
 }
 
 @media (max-width: 768px) {
-  .main-header {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .logo-container {
-    position: static;
-  }
-
-  .icon-nav {
-    gap: 20px;
-  }
-
   .page-title-banner {
     padding: 10px 40px;
     width: 100%;
+  }
+  
+  .subscriptions-grid {
+    padding-bottom: 5rem; /* Margen para nav móvil inferior */
   }
 }
 
 @media (max-width: 576px) {
   body {
-    padding: 15px 10px;
-  }
-
-  .icon-nav {
-    gap: 12px;
-    width: 100%;
-    justify-content: space-around;
-  }
-
-  .nav-item {
-    font-size: 0.75rem;
-  }
-
-  .icon-wrapper {
-    width: 38px;
-    height: 38px;
-    font-size: 1.1rem;
+    padding: 0;
   }
 
   .subscriptions-grid {
     grid-template-columns: 1fr;
+    padding: 0 1rem 5rem;
   }
 
   .page-title-banner {
@@ -309,10 +181,10 @@ body {
 
   .card-actions {
     flex-direction: column;
+    gap: 8px;
   }
 
   .btn-card {
     width: 100%;
-    text-align: center;
   }
 }

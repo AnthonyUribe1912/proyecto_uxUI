@@ -154,28 +154,8 @@
 }
 
 @media (max-width: 640px) {
-  header {
-    flex-direction: column;
-    gap: var(--spacing-md);
-    padding: var(--spacing-md);
-  }
-
-  header nav {
-    width: 100%;
-  }
-
-  header nav ul {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
-  }
-
-  header nav a {
-    padding: var(--spacing-xs) var(--spacing-sm);
-  }
-
   .perfil-page {
-    padding: var(--spacing-lg) 1rem 1.5rem;
+    padding: var(--spacing-lg) 1rem 5rem;
   }
 
   .perfil-card {
@@ -202,15 +182,6 @@
 }
 
 @media (max-width: 480px) {
-  header nav ul {
-    gap: 0.25rem;
-  }
-
-  header nav a img {
-    width: 24px;
-    height: 24px;
-  }
-
   .perfil-page > h1 {
     font-size: 1.5rem;
     padding: 0.75rem 1.25rem;
