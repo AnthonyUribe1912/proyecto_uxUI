@@ -1,12 +1,12 @@
-/* ==========================================================================
-   PANEL DE AHORRO (panel_ahorro.html) - UNIQUE STYLES
-   ========================================================================== */
+/* 
+   PANEL DE AHORRO (panel_ahorro.html) 
+    */
 
 .main-container {
   width: 100%;
   max-width: 1480px;
   margin: 1.5rem auto;
-  padding: 0 1.5rem;
+  padding: 0 1.5rem 5rem 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -14,14 +14,60 @@
   align-items: center;
   justify-content: center;
 }
+.favoritos {
+  width: 100%;
+  box-sizing: border-box;
+}
+.tarjeta-info,
+.graficas,
+.ahorro {
+  width: 100%;
+  max-width: 900px; /* Limita el ancho excesivo en pantallas grandes y alinea todo simétrico */
+  box-sizing: border-box;
+}
+/* Estilos generales para las pestañas de navegación */
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  border-radius: 18px; /* Redondeado igual a la imagen */
+  text-decoration: none;
+  color: var(--color-text-dark);
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Pestaña ACTIVA (Pintada de morado) */
+header nav ul li a.active {
+  background-color: #c3a5f8 !important; 
+  color: #7c3aed !important;            
+}
+
+/* Hover suave para las pestañas inactivas */
+header nav ul li a:hover:not(.active) {
+  background-color: rgba(195, 165, 248, 0.2);
+}
 
 /* Tarjeta Favoritos */
 .favoritos {
   border: 1px solid rgba(124, 58, 237, 0.18);
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
-  background: rgba(245, 241, 255, 0.92);
   box-shadow: 0 18px 40px rgba(124, 58, 237, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .favoritos-header {
@@ -30,6 +76,13 @@
   justify-content: space-between;
   gap: var(--spacing-md);
   margin-bottom: var(--spacing-lg);
+  width: 100%;
+}
+
+.favoritos-header h2 {
+  flex: 0.2;
+  text-align: center;
+  margin: 0;
 }
 
 .btn-favorito-corazon {
@@ -221,7 +274,16 @@
   background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 12px 30px rgba(124, 58, 237, 0.06);
 }
-
+.graficas-acciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  width: auto;
+  min-width: 120px;
+  flex-shrink: 0;
+}
 .tarjeta-info,
 .ahorro {
   text-align: center;
@@ -242,14 +304,12 @@
 
 .graficas-contenido {
   width: 100%;
-  border: 1px solid rgba(124, 58, 237, 0.14);
-  border-radius: var(--radius-lg);
-  padding: 1.75rem;
-  background-color: #ffffff;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  gap: var(--spacing-md);
+  align-items: center;
+  gap: 1rem;
+  box-sizing: border-box;
+   
 }
 
 .graficas-lista {
@@ -276,10 +336,10 @@
 
 .grafica-icono {
   width: 100%;
-  max-width: 420px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 160px;
+  height: 160px;
+  position: relative;
+  flex-shrink: 1;
 }
 
 .grafica-icono img {
@@ -293,7 +353,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 120px;
+  flex-shrink: 0;
 }
 
 .btn-compartir {
@@ -324,16 +387,42 @@
   background: var(--color-primary);
   color: var(--color-white);
   border: none;
-  padding: 0.85rem 1.5rem;
-  border-radius: 999px;
+  padding: 0.5rem 0.6rem;
   font-weight: var(--font-weight-bold);
   cursor: pointer;
-  white-space: nowrap;
-  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
-  box-shadow: 0 6px 0 rgba(124, 58, 237, 0.18);
-  min-width: 180px;
+  white-space: normal;
+  line-height: 1.2;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  box-shadow: 0 4px 0 rgba(124, 58, 237, 0.18);
+  min-width: 0;
+  width: 100%;
+  font-size: 0.75rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+.popover-compartir {
+  min-width: 140px;
+  border-radius: 16px;
+  border: 1px solid rgba(124, 58, 237, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  padding: 0.5rem;
 }
 
+.popover-compartir .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.4rem 0.6rem;
+}
+
+.popover-compartir .dropdown-item img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
 .btn-ver-mas:hover {
   background: var(--color-primary-dark);
   transform: translateY(-1px);
@@ -351,9 +440,117 @@
   margin: 0;
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN
-   ========================================================================== */
+
+/* Ajustes para el canvas en la tarjeta previa */
+.grafica-icono {
+  width: 100%;
+  max-width: 150px;
+  height: 150px;
+  position: relative;
+  flex-shrink: 1;
+}
+
+/* Modal Emergente Personalizado */
+.modal-grafica-custom {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-grafica-custom.show {
+  display: flex;
+}
+
+.modal-grafica-content {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  width: 90%;
+  max-width: 750px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+
+.modal-grafica-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.5rem;
+}
+
+.modal-grafica-header h3 {
+  margin: 0;
+  color: var(--color-primary-dark);
+}
+
+.btn-cerrar-modal {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--color-text-muted);
+}
+
+.modal-grafica-body {
+  position: relative;
+  width: 100%;
+  height: 350px;
+}
+/* --- Implementación Leyenda Vertical con Barra --- */
+.graficas-leyenda {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.graficas-leyenda li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+/* Indicador de color en forma de barrita vertical */
+.indicador-color {
+  width: 12px;
+  height: 36px;
+  border-radius: 6px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Asignacion de colores segun la grafica  */
+.item-spotify .indicador-color {
+  background-color: #7C3AED; 
+}
+
+.item-canva .indicador-color {
+  background-color: #C3A5F8; 
+}
+
+.item-otro .indicador-color {
+  background-color: #F59E0B; 
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 @media (min-width: 992px) {
   .main-container {
@@ -364,6 +561,10 @@
   }
 
   .favoritos {
+    grid-column: 1 / -1;
+  }
+
+  .page-title-container {
     grid-column: 1 / -1;
   }
 
@@ -378,6 +579,10 @@
   .favoritos-header {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .favoritos-header h2 {
+    flex: none;
   }
 
   .servicio-card {
@@ -407,4 +612,16 @@
     width: 42px;
     height: 42px;
   }
+}
+.page-title-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.page-title {
+  text-align: center;
+  margin: 0.5rem 0 1.5rem 0;
+  color: var(--color-text-dark, #111111);
+  font-size: 2rem;
+  font-weight: 700;
 }

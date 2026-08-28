@@ -10,14 +10,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/pagos.css">
+    <link rel="stylesheet" href="../css/pagos-aprobados.css">
 </head>
 <body>
 
 <header>
     <div class="logo">
-      <a href="../index.html">
-        <img src="../images/logo.png" alt="Logo de U-Subscriptions">
-      </a>
+        <a href="index.html">
+      <img src="../images/logo.png" alt="Logo de U-Subscriptions">
+        </a>
     </div>
 
     <nav aria-label="Navegación principal">
@@ -56,6 +57,24 @@
     </div>
 
     <main class="subscriptions-grid">
+
+        <article class="sub-card" id="cardConveniosAprobados">
+            <div class="status-pill status-approved">Convenios recién aprobados</div>
+
+            <div class="table-container" id="tablaConveniosAprobados">
+                <div class="table-header">
+                    <span>Compañía</span>
+                    <span>Beneficio</span>
+                    <span>Tipo</span>
+                    <span>Fecha</span>
+                </div>
+                <!-- Las filas se generan con JS (pagos.js) a partir de lo aprobado en Convenios -->
+            </div>
+
+            <p class="mensaje-vacio-aprobados" id="mensajeVacioAprobados" hidden>
+                Aún no has aprobado ningún convenio. Ve a <a href="buscar-convenios.html">Convenios</a> para elegir uno.
+            </p>
+        </article>
 
         <article class="sub-card">
             <div class="status-pill status-active">Suscripciones activas</div>
@@ -239,6 +258,9 @@
 
     </main>
 
+<<<<<<< HEAD
+    <script src="../js/pagos.js" defer></script>
+=======
     <!-- Navegación Móvil Inferior -->
     <nav class="nav-mobile-bottom" aria-label="Navegación móvil">
         <ul>
@@ -274,6 +296,7 @@
             </li>
         </ul>
     </nav>
+>>>>>>> upstream/master
 
 </body>
 </html>

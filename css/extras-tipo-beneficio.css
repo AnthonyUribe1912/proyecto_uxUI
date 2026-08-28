@@ -1,0 +1,25 @@
+/* 
+   TIPOS DE CONVENIO: cupón vs. verificación
+  */
+
+.badge-gratis {
+  background: #16a34a;
+}
+
+/* Nota aclaratoria dentro del panel de verificación */
+.nota-sin-codigo {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-style: italic
+}
+
+/* Aviso de "aprobado" que aparece al confirmar (simulación) */
+.aviso-aprobado {
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.9rem;
+  background: #dcfce7;
+  color: #15803d;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: var(--font-size-base);
+}

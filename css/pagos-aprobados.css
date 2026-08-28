@@ -1,0 +1,39 @@
+/* 
+   TARJETA "CONVENIOS RECIÉN APROBADOS"
+   (pagos.html)
+   */
+
+.status-pill.status-approved {
+  background: var(--color-primary, #7C3AED);
+  color: #fff;
+}
+
+.mensaje-vacio-aprobados {
+  padding: 1rem;
+  text-align: center;
+  color: var(--color-text-muted, #64748B);
+}
+
+.mensaje-vacio-aprobados a {
+  color: var(--color-primary, #7C3AED);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.tipo-badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: var(--radius-pill, 9999px);
+  font-size: var(--font-size-sm, 0.75rem);
+  font-weight: 700;
+}
+
+.tipo-badge.tipo-cupon {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.tipo-badge.tipo-verificacion {
+  background: #dcfce7;
+  color: #15803d;
+}
