@@ -291,21 +291,6 @@ nav a[aria-disabled="true"] img {
   margin-bottom: 1.5rem;
 }
 
-.convenios .page-title,
-.convenios h1 {
-  display: inline-block;
-  background: var(--color-primary);
-  color: var(--color-white);
-  border-radius: var(--radius-pill);
-  padding: 0.6rem 2.5rem;
-  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.2);
-  font-size: 1.5rem;
-  font-weight: var(--font-weight-bold);
-  text-align: center;
-  margin: 0;
-  width: auto;
-}
-
 .convenios h2 {
   background: transparent;
   color: var(--color-text-dark);
@@ -1001,16 +986,16 @@ footer {
     BOTON DE CORAZON DE FAVORITOS
     */
 .btn-favorito {
-  background: white;
-  border: 1px solid #e2e8f0;
+  background: transparent;
+  border: none;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: none;
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
@@ -1104,15 +1089,7 @@ footer {
   white-space: nowrap;
 }
 
-.btn-favorito {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  transition: transform var(--transition-fast);
-}
+
 .btn-favorito img { width: 20px; height: 20px; }
 .btn-favorito:hover { transform: scale(1.15); }
 .btn-favorito:focus-visible {
@@ -1483,19 +1460,7 @@ footer {
   white-space: nowrap;
 }
 
-/* Estilos para que el botón de favorito sea ovalado / circular */
-.btn-favorito {
-  background-color: #f0f0f0;   /* Color de fondo del óvalo */
-  border: 1px solid #e0e0e0;     /* Borde suave */
-  border-radius: 50px;           /* Bordes totalmente redondeados (ovalado/píldora) */
-  padding: 6px 14px;             /* Relleno interno para darle forma ovalada */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  outline: none;
-}
+
 
 /* Efecto al pasar el mouse (hover) */
 .btn-favorito:hover {
@@ -1507,8 +1472,10 @@ footer {
 .btn-favorito .icono-corazon {
   width: 18px;
   height: 18px;
-  fill: #888888; /* Color por defecto del corazón */
-  transition: fill 0.3s ease;
+  fill: none;
+  stroke: #64748b;
+  stroke-width: 2;
+  transition: transform 0.2s ease, fill 0.2s ease, stroke 0.2s ease;
 }
 
 /* Estilo cuando el favorito está activo */
